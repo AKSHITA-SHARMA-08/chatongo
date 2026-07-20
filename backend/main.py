@@ -40,7 +40,7 @@ async def chat(request: ChatRequest):
         
         chat_completion = client.chat.completions.create(
             messages=messages,
-            model="llama3-70b-8192",
+            model="llama-3.3-70b-versatile",
         )
         
         return {"response": chat_completion.choices[0].message.content}
